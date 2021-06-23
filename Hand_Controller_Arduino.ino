@@ -1,19 +1,19 @@
+#include "MPU6050_6Axis_MotionApps20.h"
 #include <I2Cdev.h>
 #include "I2Cdev.h"
-#include "MPU6050_6Axis_MotionApps20.h"
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
 #include "Wire.h"
 #endif
 
+#define LED_PIN 13 
 #define PPM_PIN 4
-#define LED_PIN 13 // (Arduino is 13)
 #define PRINT_RAW_DATA 0
 
 // ================================================================
 // ===                        VARIABLES                         ===
 // ================================================================
 
-bool blinkState = false;
+
 
 // MPU control/status vars
 MPU6050 mpu;
@@ -46,7 +46,7 @@ int throttleMax = 170;
 int channel1 = 1000;
 int channel2 = 1000;
 int channel3 = 1000;
-
+bool blinkState = false;
 
 
 // ================================================================
